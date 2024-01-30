@@ -1,0 +1,538 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(
+    245.59deg,
+    #a835db 0%,
+    #8d1350 28.53%,
+    #500671 75.52%
+  );
+}
+
+::-webkit-scrollbar {
+  background-color: #500671;
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+  background: transparent;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+#myLogo {
+  position: absolute;
+  left: 30%;
+  top: 20%;
+  opacity: 10%;
+}
+
+.logo span {
+  font-weight: 100;
+}
+
+.navlist {
+  display: flex;
+}
+
+.navlist a {
+  color: white;
+  margin: 60px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.55s ease;
+}
+
+.navlist a:hover {
+  border-bottom: 2px solid white;
+}
+
+#menu-icon {
+  color: white;
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+section {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  scroll-snap-align: end;
+  padding: 0 19%;
+}
+
+.hero-text h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 7vh;
+  font-weight: 600;
+  line-height: 1;
+  color: white;
+  margin: 0 0 45px;
+}
+
+.hero-text h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.hero-text span {
+  color: #a835db;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: linear-gradient(to right, #a835db, rgb(69, 214, 202));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fade 5s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.text-gradient {
+  color: #a835db;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: linear-gradient(to right, #a835db, rgb(69, 214, 202));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fade 5s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 1;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.hero-text p {
+  color: white;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.hero-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.hero-img img {
+  width: 70%;
+  height: auto;
+  clip-path: circle(50%);
+}
+
+.hero-text a {
+  display: inline-block;
+  color: white;
+  background: #a835db;
+  border: 1px solid transparent;
+  padding: 12px 30px;
+  list-style: 1.4;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all 0.55s ease;
+}
+
+.hero-text a:hover {
+  background: transparent;
+  border: 1px solid white;
+  transform: translateX(8px);
+}
+
+.hero-text a.ctaa {
+  background: transparent;
+  border: 1px solid white;
+  margin: 20px;
+}
+
+.hero-text a.ctaa img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skills img {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.skills img:hover {
+  filter: contrast(0);
+  scale: 1.5;
+  transform: translateY(-5px);
+}
+
+.hard-skills {
+  display: flex;
+}
+
+.experience {
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 4%;
+}
+
+.experience h1 {
+  font-size: 7vh;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.experience p {
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+}
+
+.contact-form {
+  background-color: transparent;
+  /* background-color: #a835db; */
+  padding: 3%;
+  width: 100%;
+  margin-bottom: 45px;
+  border-radius: 5px;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-inputs input {
+  background: transparent;
+  color: #fff;
+}
+
+.form-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-message label {
+  color: #fff;
+  font-size: 15px;
+  padding-bottom: 1%;
+}
+
+.form-message textarea {
+  background: transparent;
+  resize: none;
+  padding: 1%;
+  margin-bottom: 3%;
+  color: #fff;
+}
+
+.form-button {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: end;
+}
+
+.contact-form button {
+  display: inline-block;
+  color: white;
+  background: #500671;
+  border: 1px solid #a835db;
+  padding: 12px 30px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.55s ease;
+}
+
+.contact-form button:hover {
+  background: transparent;
+  border: 1px solid white;
+  transform: translateX(-8px);
+}
+
+.contact-form input {
+  display: block;
+  width: 100%;
+  margin: 2%;
+  border-radius: 5px;
+  padding: 5px;
+  border-color: #8d1350;
+}
+
+#message {
+  height: 150px;
+  border-radius: 5px;
+}
+
+.icons {
+  position: fixed;
+  top: 50%;
+  padding: 0 9%;
+  transform: translateY(-50%);
+}
+
+.icons img {
+  display: block;
+  margin: 26px 0;
+  transition: all 0.5s ease;
+}
+
+.icons img:hover {
+  scale: 1.5;
+  filter: contrast(0);
+  transform: translateY(-5px);
+}
+
+.spacer {
+  visibility: hidden;
+}
+
+@media (max-width: 1400px) {
+  header {
+    position: fixed;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+  }
+
+  header ul {
+    margin-top: 3%;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 1040px) {
+  header,
+  .hero-img {
+    visibility: hidden;
+    transition: 0.2s;
+  }
+
+  .hero {
+    display: block;
+    padding: 10% 10% 0 20%;
+    transition: 0.2s;
+  }
+
+  .contact-form {
+    padding: 0;
+    transition: 0.2s;
+  }
+
+  hr {
+    visibility: hidden;
+    transition: 0.2s;
+  }
+
+  .hard-skills {
+    position: absolute;
+    left: 15%;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 912px) {
+  .hero {
+    display: block;
+    padding: 10% 5%;
+    transition: 0.2s;
+  }
+
+  .hero-text {
+    margin-top: 5%;
+    transition: 0.2s;
+  }
+
+  h1,
+  p,
+  h4 {
+    text-align: center;
+    transition: 0.2s;
+  }
+
+  .hero-text h1 {
+    font-size: 5vh;
+    transition: 0.2s;
+  }
+
+  .icons {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 5%;
+    transition: 0.2s;
+  }
+
+  .hard-skills {
+    position: absolute;
+    left: 5%;
+    transition: 0.2s;
+  }
+
+  #myLogo {
+    visibility: visible;
+    position: fixed;
+    width: 40%;
+    top: 75%;
+  }
+}
+
+@media (max-width: 830px) {
+  .hard-skills {
+    position: absolute;
+    left: 15%;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 540px) {
+  .hard-skills {
+    visibility: visible;
+    position: absolute;
+    left: 0%;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 480px) {
+  .hard-skills {
+    visibility: hidden;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero {
+    display: block;
+    padding: 10% 5%;
+    transition: 0.2s;
+  }
+
+  .hero-text {
+    margin-top: 5%;
+    transition: 0.2s;
+  }
+
+  h1,
+  p,
+  h4 {
+    text-align: center;
+    transition: 0.2s;
+  }
+
+  .hero-text h1 {
+    font-size: 5vh;
+    transition: 0.2s;
+  }
+
+  .icons {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    top: 5%;
+    transition: 0.2s;
+  }
+
+  .hero-text a,
+  .skills {
+    visibility: hidden;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 306px) {
+  .hero-text h4 {
+    margin-top: 15%;
+    font-size: 1vh;
+    transition: 0.2s;
+  }
+  .hero-text h1 {
+    font-size: 3vh;
+    transition: 0.2s;
+  }
+}
